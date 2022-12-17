@@ -1,0 +1,373 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100%;
+    background-color: #44425f;
+}
+p, 
+h1, 
+h2, 
+a {
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.title, .subtitle {
+    font-family: 'Didact Gothic', sans-serif;
+    color: #44425f
+}
+
+.title{
+    font-size: 2rem;
+}
+
+
+/* navigation area */
+
+.navigation{
+    background-color: rgb(21,19,24, 0.2);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: 1;
+    padding-right: 2%;
+    top: 0;
+
+}
+.navigation__logo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    padding-top: 0.5rem;
+    z-index:3;
+    position:fixed;
+    top:0.5%;
+}
+
+.navigation__list {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+
+}
+
+.navigation__item {
+    display: block;
+    float: left;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 10rem;
+    }
+
+
+.navigation__link{
+    display: block;
+    color: #efeef5; 
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-family: 'Didact Gothic', sans-serif;
+    padding: .5%;
+}
+
+.navigation__item:hover {
+    background-color: #44425f;
+   
+
+}
+
+
+/*header area with cat background */
+
+.header{
+    background-image: url("images/header_sleeping_cat.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 100vw;
+    height: 100vh; 
+    display: flex;    
+    top: 0;
+    z-index: -1;
+    position: fixed;
+    
+}
+
+.header__text-area{
+    background: rgb(233,228,222, 0.5);
+    padding: 1rem;
+    width: 100%;
+    margin: auto;
+    position: absolute; 
+    top: 50%;
+    left: 0;
+}
+
+.header__title{
+    font-size: 6rem;
+    text-align: center;
+    color: #151318;
+   
+}
+
+.header__subtitle{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.mission, .visitors, .team{
+
+    min-height: 100vh;
+    min-width: 95vw;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+
+/*mission section */
+.mission {
+    background-color:rgb(21,19,24);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  
+}
+
+.mission__heading, .mission__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2%;
+}
+
+.mission__images{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 2%;
+    align-content: center;
+    width: 80%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+
+.mission__heading img{
+    margin-top: 2%;
+}
+
+
+.mission__figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #44425f;
+    width: 30%;
+    height: auto;
+    padding: 2rem 1rem;    
+    border:  0.5px solid #efeef5; 
+    overflow: hidden;
+    
+}
+.mission__image{
+    width: 85%;
+    height: auto;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-bottom:  0.5px solid #151318; 
+    border-left:  0.5px solid #151318; 
+    box-shadow: 5px 5px 5px #151318;
+  
+    
+}
+
+.mission__title{
+ color: #efeef5;
+ font-size: 3rem;}
+
+.mission__text, .mission__caption{
+    font-size: 2rem;
+    color: #efeef5;
+    text-align: center;
+}
+
+.text__mission--italic{
+    font-style: italic ;
+}
+
+/*Visitors Section */
+.visitors {
+    background-color:#44425f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2%;
+
+}
+
+.visitors__heading, .visitors__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2%;
+
+}
+
+.visitors__title{
+    color: #efeef5;
+    font-size: 3rem;}
+   
+.visitors__text, .visitors__caption{
+    font-size: 2rem;
+    color: #efeef5;
+}
+
+.visitors__image{
+    display: flex;
+    background-image: url("images/cats-side.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    width:100%;
+    margin: 0;
+    margin: auto;
+    
+}
+
+.reviews{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 40%;
+    font-size: 1.5rem;
+    height: auto;
+}
+
+.reviews__text{
+    font-size: 1.5rem;
+    padding: 2%;
+    font-style: italic;
+}
+
+.reviews__text--emphasis{
+    font-style: normal;
+    font-weight: bold;
+}
+
+/*Teams Section */
+
+.team {
+    background-color:#151318;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.team__heading, .team__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2%;
+}
+
+.team__title{
+    color: #efeef5;
+    font-size: 3rem;
+}
+   
+.team__text, .team__caption{
+    font-size: 2rem;
+    color: #efeef5;
+}
+
+.team__images{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content:center;
+    width: 100vw;
+    margin: 0;
+    margin: auto;
+}
+
+.team__container {
+     max-width: 23%;
+     position: relative;
+  }
+  
+  .team__image{
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+  .team__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:RGB(68,66,95,0.7);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+ 
+  }
+  
+  .team__container:hover .team__overlay {
+    width: 100%;
+  }
+  
+  .overlay__text {
+    white-space: nowrap; 
+    color:#151318;
+    background-color: #efeef5;
+    padding: 2%;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+/* Transparent Div */
+.transparent{
+    height: 100vh; 
+    width: 100%;
+    background-color: rgb(21,19,24,0);
+
+}
+/*
+.mainback{
+    height:100%;
+    width:100%;
+    background-image: url("images/header_sleeping_cat.jpg");
+    opacity: 0.5%;
+}*/
